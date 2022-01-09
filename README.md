@@ -1,8 +1,8 @@
 ## 🚀 DSA_IN_C
-# All data structure are here.
+   All topics of data structure are here.
 
 ## 🛠 Programming Language
-# C
+  C
 
 ## Author
 
