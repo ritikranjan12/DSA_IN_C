@@ -6,6 +6,7 @@
 int end = -1;
 int arr[maxsize];
 
+
 bool isEmpty(){
     return end==-1;
 }
@@ -27,17 +28,8 @@ void push(int item){
     arr[++end]=item;
 }
 
-bool pop(){
-    if(isEmpty()){
-        printf("Stack is Empty");
-        return false;
-    }
-    end--;
-    return true;
-}
-
 int top(){
-    return arr[end];
+    return arr[0];
 }
 
 void display(){
@@ -46,18 +38,29 @@ void display(){
         printf("%d ",arr[i]);
     }
 }
+bool pop(){
+    if(isEmpty()){
+        printf("Stack is Empty");
+        return false;
+    }
+    int removed = arr[0];
+    printf("\nElement deleted or poped is %d",removed);
+    for(int i=1;i<sizeof(arr);i++){
+        arr[i-1]=arr[i];
+    }
+    end--;
+    return true;
+}
 
 void main(){
+    push(23);
+    push(24);
+    push(25);
+    push(26);
+    push(27);
     push(45);
-    push(12);
-    push(44);
-    push(11);
-    push(43);
-    push(10);
-    push(45);
-    push(12);
-    push(44);
-    push(11);
     display();
-   
+    pop();
+    display();
+
 }

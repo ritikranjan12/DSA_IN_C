@@ -80,8 +80,7 @@ void push(char item)
                 printf("Stack Overflow\n");
                 return;
         }
-        top=top+1;
-        stack[top]=item;
+        stack[++top]=item;
 }
 
 char pop()
